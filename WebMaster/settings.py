@@ -58,7 +58,7 @@ ROOT_URLCONF = 'WebMaster.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / "apps/inicio/templates","apps/productos/templates",],
+        'DIRS': [BASE_DIR / "apps/inicio/templates",],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
