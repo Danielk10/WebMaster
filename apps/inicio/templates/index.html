@@ -1,21 +1,39 @@
+<!-- Cargando los archivos estaticos a la plantilla html -->
+{% load static %}
 <!DOCTYPE html>
 <html lang="es">
+  
 
 <head>
     <meta charset="utf-8">
-    <title>Prueba Django</title>
+    <title>Pagina Inicio</title>
+    
+<!-- Cargando los estilos ccs a la plantilla html -->
+    <link href="{% static 'css/estilos.css' %}" rel="stylesheet">
  
 </head>
 
 <body>
 	
-	<h1>
-		Hola
-		
-		</h1>
-		
+<h1 class="color-texto1">Información de la Pagina</h1>
+	
+{% if datos_pagina %}
 
+{% for dato in datos_pagina %}
+		
+		<p class="color-texto2">{{dato.informacion}}</p>
+		
+{% endfor %}
 
+{% else %}
+
+<p>No existe información en la base de datos</p>
+
+{% endif %}
+
+		
+<!-- Cargando los los script Javascript a la plantilla html -->
+<script src="{% static 'js/js.js' %}"></script>
 
 </body>
 

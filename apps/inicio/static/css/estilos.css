@@ -1,0 +1,32 @@
+.color-texto1 {
+    color: #73b1c5;
+}
+
+
+.color-texto2 {
+    color: #74b1c5;
+}
+ 
+
+.fondo1{ 
+
+    background-color: #f4d4f4;
+  
+   
+}
+
+
+.tamano-texto{
+    color: #ffffff;
+    text-align: right;
+    font-size: 11px;
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    block-size: 0px;
+    font-family: sans-serif;
+
+
+}
