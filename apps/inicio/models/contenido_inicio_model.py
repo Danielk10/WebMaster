@@ -1,6 +1,10 @@
 from django.db import models
-from base_inicio_model import ModeloBase
 
+#Importando clase ModelBase
+from apps.model.base_inicio_model import ModeloBase
+
+
+#Todos los modelos heredan de la clase ModelBase
 
 '''Modelo que se encarga de registrar informacion adicional de la pagina web'''
 class InformacionPagina(ModeloBase):
