@@ -1,7 +1,7 @@
 from django.db import models
 
 #Importando clase ModelBase
-from apps.model.base_inicio_model import ModeloBase
+from apps.inicio.models.base_inicio_model import ModeloBase
 
 
 #Todos los modelos heredan de la clase ModelBase
@@ -22,8 +22,8 @@ class InformacionPagina(ModeloBase):
         return self.informacion
         
         
-  '''Modelo que se encarga de registrar la informacion de los usuarios'''
-  class Contactanos(ModeloBase):
+'''Modelo que se encarga de registrar la informacion de los usuarios'''
+class Contactanos(ModeloBase):
       nombre_cliente = models.CharField("Nombre del Cliente",max_length=100)
       apellido_cliente = models.CharField("Apellido del Cliente",max_length=100)
       telefono_cliente = models.CharField("Teléfono del Cliente",max_length=15)
@@ -38,9 +38,9 @@ class InformacionPagina(ModeloBase):
       def __str__(self):
           return f'{self.nombre_cliente} {self.apellido_cliente}'
   
-  '''Modelo que se encarga de registrar la informacion de los Suscriptores'''
+'''Modelo que se encarga de registrar la informacion de los Suscriptores'''
 
-  class Suscriptor(ModeloBase):
+class Suscriptor(ModeloBase):
       correo = models.EmailField('Correo Electrónico', max_length = 200)
   
       class Meta:

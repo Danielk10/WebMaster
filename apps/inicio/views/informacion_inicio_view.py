@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 
 #Importando modelos
-from apps.models.contenido_inicio_model import Contactanos, Suscriptor
+from apps.inicio.models.contenido_inicio_model import Contactanos, Suscriptor
 
 # Create your views here.
 
@@ -12,10 +12,10 @@ class ContactanosInicioView(TemplateView):
     template_name = "index.html"  #atributo publico que guarda la plantilla html a renderizar 
     
     
-     #Sebreescribiendo metodo de la super clase TempleteView
-     def get(self,request,*args,**kwargs): 
+    #Sebreescribiendo metodo de la super clase TempleteView
+    def get(self,request,*args,**kwargs): 
              
-            #Transformado consulta en una lista de Python 
+             #Transformado consulta en una lista de Python 
              datos_consulta = list(Contactanos.objects.filter(estado=True))
              
              resultado = {"datos_contactos":datos_consulta}

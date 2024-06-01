@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 #importando modelos
-from apps.models.contenido_inicio_model import InformacionPagina, Contactanos, Suscriptor
+from .models.contenido_inicio_model import InformacionPagina, Contactanos, Suscriptor
 
 # Registrado modelos en el sitio de administración de Django 
 
