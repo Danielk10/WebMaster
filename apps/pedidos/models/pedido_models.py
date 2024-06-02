@@ -1,6 +1,7 @@
-# models.py
+# modelo de prueba de la app pedidos
 from django.db import models
-
+# ignorar modelo, solo fue creado para poder hacer pruebas, 
+# luego se haran pruebas directas con la app productos y sus modelos
 class Producto(models.Model):
     name = models.CharField(max_length=255)
     price = models.DecimalField(max_digits=10, decimal_places=2)

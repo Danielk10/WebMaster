@@ -1,9 +1,9 @@
-# views.py
 from django.views.generic import TemplateView
 from django.shortcuts import redirect
 from apps.pedidos.models.pedido_models import Pedido, PedidoOrden
 from apps.pedidos.forms.pedidos_forms import PedidoForm
 
+# Vista de la creacion de pedidos
 class CrearPedidoView(TemplateView):
     template_name = 'pedidos/creacion_pedidos.html'
 
@@ -26,7 +26,8 @@ class CrearPedidoView(TemplateView):
             items_formset.save()
             return redirect('exito', order_id=order.id)
         return self.render_to_response(self.get_context_data())
-
+    
+# Vista de Cracion Exitosa del Pedido
 class PedidoExitosoView(TemplateView):
     template_name = 'pedidos/pedido_exitoso.html'
 

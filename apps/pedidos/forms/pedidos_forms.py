@@ -1,4 +1,4 @@
-# forms.py
+# forms de la app pedidos
 from django import forms
 from apps.pedidos.models.pedido_models import Pedido, PedidoOrden
 
