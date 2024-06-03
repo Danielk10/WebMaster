@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crear Pedidos</title>
+</head>
+<body>
+    <h1>Crear Pedido</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {{ items_formset.management_form }}
+        {% for form in items_formset %}
+            {{ form.as_p }}
+        {% endfor %}
+        <button type="submit">Cargar Pedido</button>
+    </form>
+</body>
+</html>

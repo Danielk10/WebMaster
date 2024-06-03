@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pedido Exitoso</title>
+</head>
+<body>
+    <h1>Pedido Exitosamente Creado !</h1>
+    <p>Order ID: {{ order.id }}</p>
+    <p>Customer Name: {{ order.customer_name }}</p>
+    <p>Customer Email: {{ order.customer_email }}</p>
+    <ul>
+        {% for item in order.items.all %}
+            <li>{{ item.quantity }} x {{ item.product.name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
