@@ -58,7 +58,7 @@ ROOT_URLCONF = 'WebMaster.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / "apps/inicio/templates",],
+        'DIRS': [BASE_DIR / "apps/inicio/templates","apps/productos/templates","apps/pedidos/templates",],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -122,7 +122,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-  BASE_DIR / "apps/inicio/static",
+  BASE_DIR / "apps/inicio/static","apps/productos/static",
+  "apps/pedidos/static",
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
