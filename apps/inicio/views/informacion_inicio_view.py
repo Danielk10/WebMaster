@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic import TemplateView
 
 #Importando modelos
-from apps.inicio.models.contenido_inicio_model import Contactanos, Suscriptor
+from apps.inicio.models.contenido_inicio_model import Contactanos
 
 # Create your views here.
 
@@ -33,7 +33,7 @@ class SuscriptorInicioView(TemplateView):
     def get(self,request,*args,**kwargs): 
       
             #Transformado consulta en una lista de Python 
-            datos_consulta = list(Suscriptor.objects.filter(estado=True))
+            datos_consulta = []
             
             resultado = {"datos_suscriptores":datos_consulta}
     
