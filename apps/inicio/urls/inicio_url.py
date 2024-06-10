@@ -1,7 +1,5 @@
 from django.urls import path
-
-#Importando Vistas
-from apps.inicio.views.inicio_informacion_view import InicioView
+from apps.inicio.views.inicio_principal_views import InicioView
 
 
 #Configurando rutas

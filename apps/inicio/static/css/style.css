@@ -1,0 +1,100 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Styles */
+main {
+    padding: 2rem;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    margin-bottom: 1rem;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+}
+
+section ul li {
+    background-color: #fff;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Styles */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Error Styles */
+.error {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
