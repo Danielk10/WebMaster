@@ -14,6 +14,10 @@ class Inicio(ListView):
                 estado = True,
                 publicado = True
                 ).values_list('id',flat = True))
+         post1=[]
+         post2=[]
+         post3=[]
+         post4=[]
         if posts:
           principal = random.choice(posts)
           posts.remove(principal)
@@ -78,8 +82,12 @@ class DetallePost(DetailView):
                 estado = True,
                 publicado = True
                 ).values_list('id',flat = True))
+        post1=[]
+        post2=[]
+        post3=[]
+      
+       
         if posts:
-          
 
           posts.remove(post.id)
           post1 = random.choice(posts)
@@ -105,8 +113,8 @@ class Suscribir(View):
     def post(self,request,*args,**kwargs):
         correo = request.POST.get('correo')
         Suscriptor.objects.create(correo = correo)
-        asunto = 'GRACIAS POR SUSCRIBIRTE A BLOG.DEV!'
-        mensaje = 'Te haz suscrito exitosamente a Blog.Dev, Gracias por tu preferencia!!!'
+        asunto = 'GRACIAS POR SUSCRIBIRTE al Blog Completo'
+        mensaje = 'Te haz suscrito exitosamente a Blog Completo, Gracias por tu preferencia!!!'
         try:
             send_mail(asunto,mensaje,EMAIL_HOST_USER,[correo])
         except:
