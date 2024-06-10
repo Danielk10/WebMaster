@@ -2,10 +2,10 @@ import random
 from django.shortcuts import render,redirect
 from django.views.generic import ListView,View,DetailView
 from django.core.mail import send_mail
-from nuevo_blog.configuracion.base import EMAIL_HOST_USER
-from .models import Post,Categoria,RedesSociales,Web,Suscriptor
-from .utils import *
-from .forms import ContactoForm
+from WebMaster.settings import EMAIL_HOST_USER
+from .models.blog_model import Post,Categoria,RedesSociales,Web,Suscriptor
+from .utils.utils import *
+
 
 class Inicio(ListView):
 
@@ -57,7 +57,7 @@ class Inicio(ListView):
             'web':obtenerWeb(),
         }
 
-        return render(request,'index.html',contexto)
+        return render(request,'index_blog.html',contexto)
 
 class Listado(ListView):
 
@@ -104,4 +104,4 @@ class Suscribir(View):
         except:
             pass
 
-        return redirect('base:index')
+        return redirect('index_blog')
