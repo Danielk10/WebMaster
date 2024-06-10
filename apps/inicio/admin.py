@@ -45,12 +45,12 @@ class SuscriptorResource(resources.ModelResource):
         model = Suscriptor
 
 class CategoriaAdmin(ImportExportModelAdmin,admin.ModelAdmin):
-    list_display = ('nombre','estado','fecha_creacion')
+    list_display = ('nombre','estado','fecha_de_creacion')
     search_fields = ['nombre']
     resource_class = CategoriaResource
 
 class AutorAdmin(ImportExportModelAdmin,admin.ModelAdmin):
-    list_display = ('nombre','apellidos','email','descripcion','fecha_creacion')
+    list_display = ('nombre','apellidos','email','descripcion','fecha_de_creacion')
     search_fields = ['nombre','apellidos','email']
     resource_class = AutorResource
 
@@ -60,23 +60,23 @@ class PostAdmin(ImportExportModelAdmin,admin.ModelAdmin):
     resource_class = PostResource
 
 class WebAdmin(ImportExportModelAdmin,admin.ModelAdmin):
-    list_display = ('nosotros','email','direccion','telefono','estado','fecha_creacion')
+    list_display = ('nosotros','email','direccion','telefono','estado','fecha_de_creacion')
     search_fields = ['email']
     resource_class = WebResource
 
 
 class RedesSocialesAdmin(ImportExportModelAdmin,admin.ModelAdmin):
-    list_display = ('facebook','twitter','instagram','estado','fecha_creacion')
+    list_display = ('facebook','twitter','instagram','estado','fecha_de_creacion')
     search_fields = ['facebook']
     resource_class = RedesSocialesResource
 
 class ContactoAdmin(ImportExportModelAdmin,admin.ModelAdmin):
-    list_display = ('nombre','apellidos','correo','asunto','mensaje','estado','fecha_creacion')
+    list_display = ('nombre','apellidos','correo','asunto','mensaje','estado','fecha_de_creacion')
     search_fields = ['correo']
     resource_class = ContactoResource
 
 class SuscriptorAdmin(ImportExportModelAdmin,admin.ModelAdmin):
-    list_display = ('correo','estado','fecha_creacion')
+    list_display = ('correo','estado','fecha_de_creacion')
     search_fields = ['correo']
     resource_class = SuscriptorResource
 
