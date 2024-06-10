@@ -4,7 +4,7 @@ from apps.inicio.models.inicio_base_models import BaseModel
 
 class Banner(BaseModel):
     titulo = models.CharField(max_length=200)
-    imagen = models.ImageField(upload_to='banners/')
+    imagen = models.ImageField(upload_to='inicio/banners/')
     descripcion = models.TextField(blank=True, null=True)
 
     class Meta:
@@ -29,7 +29,7 @@ class Servicio(BaseModel):
 class Testimonio(BaseModel):
     cliente = models.CharField(max_length=100)
     testimonio = models.TextField()
-    imagen = models.ImageField(upload_to='testimonios/', blank=True, null=True)
+    imagen = models.ImageField(upload_to='inicio/testimonios/', blank=True, null=True)
 
     class Meta:
         verbose_name = "Testimonio"
@@ -41,7 +41,7 @@ class Testimonio(BaseModel):
 class Equipo(BaseModel):
     nombre = models.CharField(max_length=100)
     puesto = models.CharField(max_length=100)
-    imagen = models.ImageField(upload_to='equipo/')
+    imagen = models.ImageField(upload_to='inicio/equipo/')
     
     class Meta:
         verbose_name = "Equipo"
