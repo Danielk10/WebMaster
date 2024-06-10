@@ -1,7 +1,5 @@
 from django.db import models
-
-#Importando clase ModelBase
-from apps.inicio.models.base_inicio_model import ModeloBase
+from apps.inicio.models.inicio_base_model import ModeloBase
 
 
 #Todos los modelos heredan de la clase ModelBase

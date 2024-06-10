@@ -1,8 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
-
-#Importando modelo InformacionPagina
-from apps.inicio.models.contenido_inicio_model import InformacionPagina
+from apps.inicio.models.inicio_contenido_model import InformacionPagina
 
 # Create your views here.
 
