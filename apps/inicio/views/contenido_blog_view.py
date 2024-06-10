@@ -14,19 +14,22 @@ class Inicio(ListView):
                 estado = True,
                 publicado = True
                 ).values_list('id',flat = True))
-        principal = random.choice(posts)
-        posts.remove(principal)
-        principal = consulta(principal)
+        if posts:
+          principal = random.choice(posts)
+          posts.remove(principal)
+          principal = consulta(principal)
 
-        post1 = random.choice(posts)
-        posts.remove(post1)
-        post2 = random.choice(posts)
-        posts.remove(post2)
-        post3 = random.choice(posts)
-        posts.remove(post3)
-        post4 = random.choice(posts)
-        posts.remove(post4)
-
+          post1 = random.choice(posts)
+          posts.remove(post1)
+          post2 = random.choice(posts)
+          posts.remove(post2)
+          post3 = random.choice(posts)
+          posts.remove(post3)
+          post4 = random.choice(posts)
+          posts.remove(post4)
+        else:
+          principal=[]
+         
         try:
             post_videojuegos = Post.objects.filter(
                                 estado = True,
@@ -75,13 +78,18 @@ class DetallePost(DetailView):
                 estado = True,
                 publicado = True
                 ).values_list('id',flat = True))
-        posts.remove(post.id)
-        post1 = random.choice(posts)
-        posts.remove(post1)
-        post2 = random.choice(posts)
-        posts.remove(post2)
-        post3 = random.choice(posts)
-        posts.remove(post3)
+        if posts:
+          
+
+          posts.remove(post.id)
+          post1 = random.choice(posts)
+          posts.remove(post1)
+          post2 = random.choice(posts)
+          posts.remove(post2)
+          post3 = random.choice(posts)
+          posts.remove(post3)
+        else:
+          posts=[]
 
         contexto = {
             'post':post,
