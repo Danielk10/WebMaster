@@ -14,10 +14,10 @@ class Inicio(ListView):
                 estado = True,
                 publicado = True
                 ).values_list('id',flat = True))
-         post1=[]
-         post2=[]
-         post3=[]
-         post4=[]
+        post1=[]
+        post2=[]
+        post3=[]
+        post4=[]
         if posts:
           principal = random.choice(posts)
           posts.remove(principal)
