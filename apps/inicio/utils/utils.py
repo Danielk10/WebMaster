@@ -1,5 +1,5 @@
 from django.core.paginator import Paginator
-from .models.blog_model import Post,Categoria,RedesSociales,Web
+from apps.inicio.models.blog_model import Post,Categoria,RedesSociales,Web
 
 def consulta(id):
     try:

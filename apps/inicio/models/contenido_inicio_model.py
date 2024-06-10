@@ -38,14 +38,3 @@ class Contactanos(ModeloBase):
       def __str__(self):
           return f'{self.nombre_cliente} {self.apellido_cliente}'
   
-'''Modelo que se encarga de registrar la informacion de los Suscriptores'''
-
-class Suscriptor(ModeloBase):
-      correo = models.EmailField('Correo Electrónico', max_length = 200)
-  
-      class Meta:
-          verbose_name = 'Suscriptor'
-          verbose_name_plural = 'Suscriptores'
-  
-      def __str__(self):
-          return self.correo

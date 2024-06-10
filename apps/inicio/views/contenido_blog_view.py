@@ -3,8 +3,8 @@ from django.shortcuts import render,redirect
 from django.views.generic import ListView,View,DetailView
 from django.core.mail import send_mail
 from WebMaster.settings import EMAIL_HOST_USER
-from .models.blog_model import Post,Categoria,RedesSociales,Web,Suscriptor
-from .utils.utils import *
+from apps.inicio.models.blog_model import Post,Categoria,RedesSociales,Web,Suscriptor
+from apps.inicio.utils.utils import *
 
 
 class Inicio(ListView):
