@@ -1,11 +1,9 @@
-from django.contrib import admin
 from django.urls import path
 
 
-
-from apps.productos.views.views import verProductos
+from ..views.views import ListadoProductosView
 
 urlpatterns = [
-    path('', verProductos)
+    path('', ListadoProductosView.as_view(), name='listado_productos'),
 
 ]

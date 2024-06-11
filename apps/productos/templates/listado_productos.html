@@ -1,0 +1,26 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Productos</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <h1 class="texto-rojo">Listado de Productos</h1>
+    <ul>
+        {% for producto in productos %}
+            <li>
+                <strong class="texto-azul">Nombre:</strong> {{ producto.nombre }}<br>
+                <strong class="texto-verde">Precio:</strong> {{ producto.precio }}<br>
+                <strong>Descripción:</strong> {{ producto.descripcion }}<br>
+                <strong>Categoría:</strong> {{ producto.categoria }}<br>
+                <strong>Fecha de Creación:</strong> {{ producto.fecha_creacion }}
+            </li>
+            <hr>
+        {% endfor %}
+    </ul>
+</body>
+</html>
