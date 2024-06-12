@@ -46,8 +46,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'import_export',
     'apps.inicio',
+    'apps.ventas',
     'apps.productos',
     'apps.pedidos',
+    'apps.contactanos',
 ]
 
 MIDDLEWARE = [
@@ -65,7 +67,7 @@ ROOT_URLCONF = 'WebMaster.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / "apps/inicio/templates",BASE_DIR / "apps/productos/templates",BASE_DIR / "apps/pedidos/templates",],
+        'DIRS': [BASE_DIR / 'apps/inicio/templates',BASE_DIR / 'apps/productos/templates',BASE_DIR / 'apps/pedidos/templates',BASE_DIR / 'apps/ventas/templates',BASE_DIR / 'apps/contactanos/templetes',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -131,7 +133,7 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = [
-  BASE_DIR / "apps/inicio/static",BASE_DIR / "apps/productos/static",BASE_DIR / "apps/pedidos/static",
+  BASE_DIR / 'apps/inicio/static',BASE_DIR / 'apps/productos/static',BASE_DIR / 'apps/pedidos/static',BASE_DIR / 'apps/ventas/static',BASE_DIR / 'apps/contactanos/static',
 ]
 
 
