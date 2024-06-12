@@ -25,7 +25,7 @@ urlpatterns = [
     path('', include('apps.inicio.urls.inicio_urls')),
     path('pedidos/',include('apps.pedidos.urls.urls')),
     path('productos/', include('apps.productos.urls.urls_blog')),
-    path('ventas/', include('apps.ventas.urls.ventas_urls')),
-    path('contactanos/', include('apps.contactanos.urls.contactanos_urls')),
+   # path('ventas/', include('apps.ventas.urls.ventas_urls')),
+   # path('contactanos/', include('apps.contactanos.urls.contactanos_urls')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
