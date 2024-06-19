@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Producto</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Agregar Producto</h1>
+        <form method="post" enctype="multipart/form-data" class="product-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="button">Guardar</button>
+        </form>
+        <a href="{% url 'product-list' %}" class="button">Regresar a Lista</a>
+    </div>
+</body>
+</html>

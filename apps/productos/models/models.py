@@ -1,13 +1,11 @@
 from django.db import models
 
-class Productos(models.Model):
-    nombre = models.CharField(max_length=100)
-    precio = models.DecimalField(max_digits=6, decimal_places=2)
-    descripcion = models.TextField()
-    categoria = models.CharField(max_length=50)
-    fecha_creacion = models.DateTimeField(auto_now_add=True)
+class Product(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    category = models.CharField(max_length=50)
+    image = models.ImageField(upload_to='product_images/')
+    price = models.DecimalField(max_digits=10, decimal_places=2)
 
     def __str__(self):
-        return f'Producto {self.id}: {self.nombre} {self.precio} {self.descripcion} {self.categoria} {self.fecha_creacion}'
-
-
+        return self.name
