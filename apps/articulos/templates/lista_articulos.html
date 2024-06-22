@@ -1,0 +1,16 @@
+<!-- articulos/templates/articulos/lista_articulos.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Artículos</title>
+</head>
+<body>
+    <h1>Lista de Artículos</h1>
+    <ul>
+        {% for articulo in object_list %}
+        <li><a href="{% url 'detalle_articulo' articulo.pk %}">{{ articulo.titulo }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

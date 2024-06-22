@@ -1,0 +1,15 @@
+<!-- articulos/templates/articulos/detalle_articulo.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ object.titulo }}</title>
+</head>
+<body>
+    <h1>{{ object.titulo }}</h1>
+    <p>{{ object.descripcion }}</p>
+    <p>Precio: {{ object.precio }}</p>
+    <p>Categoría: {{ object.categoria.nombre }}</p>
+    <a href="{% url 'lista_articulos' %}">Volver a la lista</a>
+</body>
+</html>

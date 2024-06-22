@@ -1,0 +1,17 @@
+<!-- articulos/templates/articulos/crear_articulo.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crear Artículo</title>
+</head>
+<body>
+    <h1>Crear Nuevo Artículo</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar</button>
+    </form>
+    <a href="{% url 'lista_articulos' %}">Volver a la lista</a>
+</body>
+</html>
